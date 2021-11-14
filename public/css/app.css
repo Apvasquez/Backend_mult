@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Document
@@ -1106,6 +1106,10 @@ select {
 	margin-left: auto;
 	margin-right: auto;
 }
+.my-4 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
 .ml-3 {
 	margin-left: 0.75rem;
 }
@@ -1393,14 +1397,14 @@ select {
 .rounded-md {
 	border-radius: 0.375rem;
 }
+.rounded-full {
+	border-radius: 9999px;
+}
 .rounded-lg {
 	border-radius: 0.5rem;
 }
 .rounded {
 	border-radius: 0.25rem;
-}
-.rounded-full {
-	border-radius: 9999px;
 }
 .rounded-l-md {
 	border-top-left-radius: 0.375rem;
@@ -1424,6 +1428,9 @@ select {
 .border-2 {
 	border-width: 2px;
 }
+.border-8 {
+	border-width: 8px;
+}
 .border-b-2 {
 	border-bottom-width: 2px;
 }
@@ -1435,6 +1442,9 @@ select {
 }
 .border-b {
 	border-bottom-width: 1px;
+}
+.border-r {
+	border-right-width: 1px;
 }
 .border-gray-300 {
 	--tw-border-opacity: 1;
@@ -1454,6 +1464,18 @@ select {
 .border-gray-100 {
 	--tw-border-opacity: 1;
 	border-color: rgba(243, 244, 246, var(--tw-border-opacity));
+}
+.border-red-900 {
+	--tw-border-opacity: 1;
+	border-color: rgba(127, 29, 29, var(--tw-border-opacity));
+}
+.border-indigo-600 {
+	--tw-border-opacity: 1;
+	border-color: rgba(79, 70, 229, var(--tw-border-opacity));
+}
+.border-gray-400 {
+	--tw-border-opacity: 1;
+	border-color: rgba(156, 163, 175, var(--tw-border-opacity));
 }
 .bg-white {
 	--tw-bg-opacity: 1;
@@ -1502,6 +1524,14 @@ select {
 .bg-gray-200 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+.bg-red-500 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+}
+.bg-purple-600 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
 	--tw-bg-opacity: 0.25;
@@ -1676,6 +1706,9 @@ select {
 }
 .tracking-widest {
 	letter-spacing: 0.1em;
+}
+.tracking-wider {
+	letter-spacing: 0.05em;
 }
 .text-gray-500 {
 	--tw-text-opacity: 1;

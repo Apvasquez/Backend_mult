@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Table;
+use App\Models\table;
 use Illuminate\Http\Request;
 
 class TableController extends Controller
@@ -25,14 +25,47 @@ class TableController extends Controller
      */
     public function multiplicacion($number)
     {
-        $date[] = 0;
-            $j=0;
-            for($i =1; $i <= 10 ; $i++){
-                $date[$j] = "$i * $number = ". $i* $number;
-                $j=$j+1;
 
-            }
-            return response()->json(['data'=> $date],201);
+        $result [] = '';
+
+        table::truncate();
+        for($i=1;$i<=10;$i++){
+            $result[$i]  = table::create([
+                'numero_1' => $i,
+                'numero_2' => $number,
+                'resultado' => $i * $number
+            ]);
+
+        }
+        $tables = table::all();
+
+        foreach ($tables as $table) {
+            $data [] = [
+                'result' => $table->resultado,
+                'number_1' => $table->numero_1,
+                'number_2' => $table->numero_2,
+            ];
+        }
+
+
+
+        // $date  = '';
+
+        // $j =0 ;
+        //     for($i =1; $i <= 10 ; $i++){
+
+        //         $date[$j] = "$i * $number = ". $i* $number;
+
+        //     }
+        // $response = [
+        //     'result' => $result
+
+        // ];
+
+        // return response($response, 201);
+            return $tables;
+
+
 
     }
     public function suma($number1,$number2)
