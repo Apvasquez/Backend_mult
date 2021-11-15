@@ -26,8 +26,7 @@ class TableController extends Controller
     public function multiplicacion($number)
     {
 
-        $result [] = '';
-
+        $result [] = '';//Lista
         table::truncate();
         for($i=1;$i<=10;$i++){
             $result[$i]  = table::create([
